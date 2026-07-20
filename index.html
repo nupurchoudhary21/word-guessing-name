@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+   <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Word Guessing Game</h1>
+        <p>
+            <b>Hint: </b> Country Name 
+        </p>
+
+        <p id="showWord" class="word-display"></p>
+
+        <!-- NEW: Attempts remaining -->
+        <p class="info">
+            Attempts left:
+            <span id="attempts">6</span>
+        </p>
+
+        <!-- NEW: Guessed letters -->
+        <p class="info">
+            Guessed letters:
+            <span id="guessedLetters">None</span>
+        </p>
+
+
+        <!-- Input section -->
+        <div class="input-section">
+            <label for="letter-input">Guess one letter</label>
+
+            <input
+                type="text"
+
+                id="letter-input"
+                placeholder="A"
+                autocomplete="off">
+        </div>
+
+     <div class="buttons">
+         <button id="guess-btn" onclick="guessLetter()">
+             Submit
+         </button>
+
+         <button id="play-again-btn" onclick="resetGame()" style="display: none;">
+         Play Again
+    </button>
+
+
+        </div>
+
+    </div>
+</body>
+</html>
